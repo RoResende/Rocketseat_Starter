@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function exercicio_1() {
+            var endereco = {
+                rua: "Rua dos Pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+
+            var text = "O usuario mora em " + endereco.cidade + " / " + endereco.uf +
+                " no bairro " + endereco.bairro + ", na rua \"" + endereco.rua + 
+                "\" com numero " + endereco.numero + "."
+            console.log(text);
+        }
+
+        function exercicio_2(x,y) {
+            for (i=x;i<=y;i++) {
+                if (i%2==00) {
+                    console.log(i);
+                }
+            }
+        }
+
+        function exercicio_3 (){
+            function temHabilidade(skills) {
+                return skills.includes("Javascript")
+            }
+            
+            var skills = ["Javascript", "ReactJS", "React Native"]
+            console.log(temHabilidade(skills));
+        }
+
+        function exercicio_4 () {
+            function experiencia (anos){
+                switch (true) {
+                    case anos<=1:
+                        return "Iniciante";
+                        break;
+                    case (anos > 1 && anos <= 3):
+                        return "Intermediário";
+                        break;
+                    case (anos > 3 && anos <= 6):
+                        return "Avançado";
+                        break
+                    default:
+                        return "Jedi Master";
+                        break;
+                }
+            }
+
+            var anosEstudo = 7;
+            console.log(experiencia(anosEstudo));
+        }
+
+        function exercicio_5 () {
+            function userSkills (usuario) {
+                for (const i of usuario) {
+                    var text = "O "+i.nome+" possui as habilidades: "+i.habilidades.join();
+                    console.log(text);
+                }
+            }
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS","Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            userSkills(usuarios);
+        }
+
+        exercicio_1();
+        exercicio_2(32,321);
+        exercicio_3();
+        exercicio_4();
+        exercicio_5();
+
+    </script>
+</body>
+
+</html>
